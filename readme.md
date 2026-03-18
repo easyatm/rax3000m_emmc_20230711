@@ -1,4 +1,6 @@
-### 解锁SSH(配置文件未加密)
+# RAX3000 eMMC 版刷ImmortalWrt 24.10.5
+
+# 解锁SSH(配置文件未加密)
 从路由器中导出配置文件: cfg_export_config_file.conf 使用7z打开修改
 
     1,编辑“etc/config/dropbear”，将“enable”设置为“1”。
@@ -6,12 +8,14 @@
       root::19523:0:99999:7:::
 上传到路由器后即可开启ssh登录
 
+
+# 刷入3个固件
 ### 刷入uboot
  使用winscp上传二进制文件
 
-    rax3000m-emmc-bl31-uboot.fip
     rax3000m-emmc-gpt.bin
     rax3000m-emmc-preloader.bin
+    rax3000m-emmc-bl31-uboot.fip
 
 #### 写入新的GPT表：
 
@@ -36,8 +40,8 @@
 ![我的截图](ScreenShot_2026-03-18_160729_225.png)
 
 
-###刷最新系统
+# 安装完整系统
 
-最后进入192.168.1.1 op系统刷写包
+最后进入192.168.1.1 op系统再刷写包
 
     immortalwrt-24.10.5-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb
