@@ -33,12 +33,20 @@
     dd if=/tmp/rax3000m-emmc-bl31-uboot.fip of=/dev/mmcblk0 bs=512 seek=13312 conv=fsync
 
 ### 刷写启动包
- 将windows系统网卡ip改为192.168.1.254
-    immortalwrt-mediatek-filogic-cmcc_rax3000m-initramfs-recovery.itb
+    说明:前面刷入的uboot会连接192.168.1.254的tftp服务端,自动传输目录下的immortalwrt-mediatek-filogic-cmcc_rax3000m-initramfs-recovery.itb文件
 
-    启动tftp后会发现这个日志,即完事了.
+ 将windows系统网卡ip改为192.168.1.254
+
+ 运行tftpd32.exe
+
+ 路由器重新通电或执行reboot重启
+
+ 等待tftp中的日志,出现这个就是完事了.等路由自己安装
+    
 ![我的截图](ScreenShot_2026-03-18_160729_225.png)
 
+
+    如果没有出现,断电,按住reset再通电,5秒后松开
 
 # 安装完整系统
 
