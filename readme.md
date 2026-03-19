@@ -46,10 +46,13 @@
 ![我的截图](ScreenShot_2026-03-18_160729_225.png)
 
 
-    如果没有出现,断电,按住reset再通电,5秒后松开
+    如果长时间没有出现,断电,按住reset再通电,5秒后松开
 
 # 安装完整系统
 
 最后进入192.168.1.1 op系统再刷写包
 
     immortalwrt-24.10.5-mediatek-filogic-cmcc_rax3000m-squashfs-sysupgrade.itb
+
+### TTL接线
+![TTL接线](rax3000m_ttl.jpg)
